@@ -7,13 +7,14 @@ import java.time.LocalDate;
 
 //name profilePicture,salary,startDate,gender,notes
 
+
 @Entity
 @Table(name = "employee_details")
 public class EmployeeDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_id")
-    private static int id;
+    private int employee_id;
     @Column(name = "employee_name")
     private String employee_name;
     @Column(name = "employee_picture")
@@ -39,13 +40,13 @@ public class EmployeeDetails {
     public EmployeeDetails(){
 
     }
-    public static int getEmployee_id() {
-        return id;
+    public int getEmployee_id() {
+        return employee_id;
     }
 
 
     public void setEmployee_id(int employee_id) {
-        this.id = employee_id;
+        this.employee_id = employee_id;
     }
 
     public String getEmployee_name() {
@@ -91,7 +92,7 @@ public class EmployeeDetails {
     @Override
     public String toString() {
         return "EmployeeDetails{" +
-                "employee_id=" + id +
+                "employee_id=" + employee_id +
                 ", employee_name='" + employee_name + '\'' +
                 ", employee_profilePicture='" + employee_profilePicture + '\'' +
                 ", employee_salary=" + employee_salary +

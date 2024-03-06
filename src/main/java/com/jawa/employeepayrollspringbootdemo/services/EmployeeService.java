@@ -33,7 +33,7 @@ public class EmployeeService implements IEmployeeService{
     }
 
     public EmployeeDetails updateEmployee(int id){
-        EmployeeDetails update = repo.findById(EmployeeDetails.getEmployee_id()).orElse(null);
+        EmployeeDetails update = repo.findById(id).get();
         update.setEmployee_name("Varun");
         update.setEmployee_salary(13000L);
         update.setEmployee_profilePicture("gigi.com");
