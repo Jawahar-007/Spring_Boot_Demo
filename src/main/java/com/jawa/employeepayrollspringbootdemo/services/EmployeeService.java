@@ -42,7 +42,7 @@ public class EmployeeService implements IEmployeeService{
     }
 
     public void removeEmployee(int id) {
-            repo.findById(id);
+            EmployeeDetails delete = repo.findById(id).get();
             repo.deleteById(id);
 
         //get id : 6 passed by user ; id:6 to delete using by passing object (to get) as argument to repo.delete()
